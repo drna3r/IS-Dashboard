@@ -3,12 +3,13 @@
 
  //database configuration file
 include("../includes/config.php");
+include("../classes/functions.php");
 
 
 
 //values to be inserted in database table
 $competitor_url = '"'.$mysqli->real_escape_string(@$_POST['url']).'"';
-$competitor_title = '"'.$mysqli->real_escape_string(@$_POST['title']).'"';
+$competitor_title = '"'.$mysqli->real_escape_string(get_title(@$_POST['url'])).'"';
 $competitor_name = '"'.$mysqli->real_escape_string(@$_POST['corpname']).'"';
 //MySqli Insert Query
 $insert_row = $mysqli->query("INSERT INTO competitor (url, 
