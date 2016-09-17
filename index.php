@@ -790,8 +790,9 @@ include("classes/functions.php");
                     </thead>
                     <tbody>
 					<?php
-						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
-						$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5,20");
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
+						$results = $mysqli->query("SELECT url, title, corpname FROM competitor");
 						//output results
 						while($row = $results->fetch_assoc()) {
 							print '<tr>';
