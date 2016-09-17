@@ -1,7 +1,12 @@
+<?php
+include("includes/config.php");
+include("classes/functions.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Test More HR... -->
     <meta charset="UTF-8">
     <title>InfoSalamat Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -40,6 +45,10 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	
+	
+	
   </head>
   <body class="skin-blue sidebar-mini">
     <div class="wrapper">
@@ -765,9 +774,9 @@
                 <div class="box-body">			
                   <div class="input-group">
                     <div class="input-group-btn">
-                      <button type="button" class="btn btn-danger">اضافه کردن آدرس سایت رقیب</button>
+                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
                     </div><!-- /btn-group -->
-                    <input type="text" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
+                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
                   </div><!-- /input-group -->
 				<br>
                   <table id="example2" class="table table-bordered table-hover">
@@ -780,32 +789,21 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td><a href="http://google.com">پزشک خوب</a></td>
-                        <td>Internet
-                          Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                      </tr>
-                      <tr>
-                        <td>سلام دکتر</td>
-                        <td>Internet
-                          Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>درمانکده</td>
-                        <td>All others</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>                   
-					  <tr>
-                        <td>یلدا</td>
-                        <td>تست سورتینگ</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>
+					<?php
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
+						$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
+						//output results
+						while($row = $results->fetch_assoc()) {
+							print '<tr>';
+							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
+							print '<td>'.$row["corpname"].'</td>';
+							print '<td></td>';
+							print '<td></td>';
+							print '</tr>';
+						}  
+						// Frees the memory associated with a result
+						$results->free();
+					?>
                     </tbody>
                   </table>
                 </div><!-- /.box-body -->
@@ -1272,7 +1270,24 @@
 			  }
         });
       });
+	  
+	  
+	  
+	  
+	  /*   Debug For Jquery Conflict / Hosseyn Rahimi  */
+	  		$("#btnaddcompetitor").click(function(){
+			$.post("processors/addcompetitor.php",
+			{
+				url: $("#competitor_url").val()
+			},
+			function(data, status){
+				alert("Data: " + data + "\nStatus: " + status);
+			});
+		});
     </script>
 	
   </body>
 </html>
+<?php
+$mysqli->close();
+?>
