@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Test More HR... -->
     <meta charset="UTF-8">
     <title>InfoSalamat Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
