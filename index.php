@@ -536,6 +536,58 @@ include("classes/functions.php");
               </div>
             </div><!-- ./col -->
           </div><!-- /.row -->
+		  
+		  
+		  
+		  		<!-- جدول بررسی رقبا -->
+              <div class="row">
+			  <div class="col-md-12">
+			  <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">جدول بررسی رقبا</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">			
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
+                    </div><!-- /btn-group -->
+                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
+                  </div><!-- /input-group -->
+				<br>
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>نام وبسایت</th>
+						<th>نام شرکت</th>
+                        <th>الکسا (ایران)</th>
+                        <th>الکسا (جهانی)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+					<?php
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
+						$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
+						//output results
+						while($row = $results->fetch_assoc()) {
+							print '<tr>';
+							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
+							print '<td>'.$row["corpname"].'</td>';
+							print '<td></td>';
+							print '<td></td>';
+							print '</tr>';
+						}  
+						// Frees the memory associated with a result
+						$results->free();
+					?>
+                    </tbody>
+                  </table>
+				  </div>
+				  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->	
+		  
+		  
+		  
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
@@ -765,51 +817,7 @@ include("classes/functions.php");
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
-			
-		<!-- جدول بررسی رقبا -->
-              <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">جدول بررسی رقبا</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">			
-                  <div class="input-group">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
-                    </div><!-- /btn-group -->
-                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
-                  </div><!-- /input-group -->
-				<br>
-                  <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>نام وبسایت</th>
-						<th>نام شرکت</th>
-                        <th>الکسا (ایران)</th>
-                        <th>الکسا (جهانی)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-					<?php
-						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
-						$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
-						//output results
-						while($row = $results->fetch_assoc()) {
-							print '<tr>';
-							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
-							print '<td>'.$row["corpname"].'</td>';
-							print '<td></td>';
-							print '<td></td>';
-							print '</tr>';
-						}  
-						// Frees the memory associated with a result
-						$results->free();
-					?>
-                    </tbody>
-                  </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->	
-
-              <!-- Map box -->
+            <!-- Map box -->
               <div class="box box-solid bg-light-blue-gradient">
                 <div class="box-header">
                   <!-- tools box -->
