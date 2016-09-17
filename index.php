@@ -1,3 +1,9 @@
+<?php
+include("includes/config.php");
+include("classes/functions.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -783,32 +789,21 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td><a href="http://google.com">پزشک خوب</a></td>
-                        <td>Internet
-                          Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td> 4</td>
-                      </tr>
-                      <tr>
-                        <td>سلام دکتر</td>
-                        <td>Internet
-                          Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>درمانکده</td>
-                        <td>All others</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>                   
-					  <tr>
-                        <td>یلدا</td>
-                        <td>تست سورتینگ</td>
-                        <td>-</td>
-                        <td>-</td>
-                      </tr>
+					<?php
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
+						$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
+						//output results
+						while($row = $results->fetch_assoc()) {
+							print '<tr>';
+							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
+							print '<td>'.$row["corpname"].'</td>';
+							print '<td></td>';
+							print '<td></td>';
+							print '</tr>';
+						}  
+						// Frees the memory associated with a result
+						$results->free();
+					?>
                     </tbody>
                   </table>
                 </div><!-- /.box-body -->
@@ -1293,3 +1288,6 @@
 	
   </body>
 </html>
+<?php
+$mysqli->close();
+?>
