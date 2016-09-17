@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Test More... -->
+  <!-- Test More HR... -->
     <meta charset="UTF-8">
 <<<<<<< HEAD
     <title>InfoSalamat Dashboard</title>
