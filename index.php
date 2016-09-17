@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <!-- Test More HR... -->
     <meta charset="UTF-8">
     <title>InfoSalamat Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
@@ -40,6 +39,21 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	
+	<script>
+	
+
+	$("#btnaddcompetitor").click(function(){
+	$.post("/processors/addcompetitor.php",
+    {
+        url: $("competitor_url").val()
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+});
+	</script>
   </head>
   <body class="skin-blue sidebar-mini">
     <div class="wrapper">
@@ -765,9 +779,9 @@
                 <div class="box-body">			
                   <div class="input-group">
                     <div class="input-group-btn">
-                      <button type="button" class="btn btn-danger">اضافه کردن آدرس سایت رقیب</button>
+                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
                     </div><!-- /btn-group -->
-                    <input type="text" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
+                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
                   </div><!-- /input-group -->
 				<br>
                   <table id="example2" class="table table-bordered table-hover">
