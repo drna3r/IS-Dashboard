@@ -1,9 +1,8 @@
 <?php
 //include
- database configuration file
+
+ //database configuration file
 include("../includes/config.php");
-
-
 
 
 
@@ -12,7 +11,7 @@ $competitor_url = '"'.$mysqli->real_escape_string(@$_POST['url']).'"';
 $competitor_title = '"'.$mysqli->real_escape_string(@$_POST['title']).'"';
 $competitor_name = '"'.$mysqli->real_escape_string(@$_POST['corpname']).'"';
 //MySqli Insert Query
-$insert_row = $mysqli->query("INSERT INTO ompetitor (url, 
+$insert_row = $mysqli->query("INSERT INTO competitor (url, 
 title, corpname) VALUES($competitor_url, $competitor_title, 
 $competitor_name)");
 //print '<h3>Insert a record</h3>';
@@ -22,4 +21,10 @@ print 'Success! ID of last inserted record is : ' .$mysqli->insert_id
 }else{
 die('Error : ('. $mysqli->errno .') '. $mysqli->error);
 }
+
+
+
+
+
+
 ?>

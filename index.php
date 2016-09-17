@@ -41,17 +41,7 @@
     <![endif]-->
 	
 	
-	<script>
-			$("#btnaddcompetitor").click(function(){
-			$.post("/processors/addcompetitor.php",
-			{
-				url: $("competitor_url").val()
-			},
-			function(data, status){
-				alert("Data: " + data + "\nStatus: " + status);
-			});
-		});
-	</script>
+	
 	
   </head>
   <body class="skin-blue sidebar-mini">
@@ -1291,9 +1281,9 @@
 	  
 	  /*   Debug For Jquery Conflict / Hosseyn Rahimi  */
 	  		$("#btnaddcompetitor").click(function(){
-			$.post("/processors/addcompetitor.php",
+			$.post("processors/addcompetitor.php",
 			{
-				url: $("competitor_url").val()
+				url: $("#competitor_url").val()
 			},
 			function(data, status){
 				alert("Data: " + data + "\nStatus: " + status);
