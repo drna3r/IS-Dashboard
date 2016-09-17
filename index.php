@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
     <link rel="stylesheet" href="plugins/morris/morris.css">
+	<!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
     <!-- jvectormap -->
     <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
@@ -754,6 +756,60 @@
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
+			
+		<!-- جدول بررسی رقبا -->
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">جدول بررسی رقبا</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">			
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-danger">اضافه کردن آدرس سایت رقیب</button>
+                    </div><!-- /btn-group -->
+                    <input type="text" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
+                  </div><!-- /input-group -->
+				<br>
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>نام وبسایت</th>
+						<th>نام شرکت</th>
+                        <th>الکسا (ایران)</th>
+                        <th>الکسا (جهانی)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="http://google.com">پزشک خوب</a></td>
+                        <td>Internet
+                          Explorer 4.0</td>
+                        <td>Win 95+</td>
+                        <td> 4</td>
+                      </tr>
+                      <tr>
+                        <td>سلام دکتر</td>
+                        <td>Internet
+                          Explorer 5.0</td>
+                        <td>Win 95+</td>
+                        <td>5</td>
+                      </tr>
+                      <tr>
+                        <td>درمانکده</td>
+                        <td>All others</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>                   
+					  <tr>
+                        <td>یلدا</td>
+                        <td>تست سورتینگ</td>
+                        <td>-</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->	
 
               <!-- Map box -->
               <div class="box box-solid bg-light-blue-gradient">
@@ -1180,5 +1236,43 @@
     <script src="dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
+	
+	
+	
+	
+	    <!-- Bootstrap 3.3.4 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+      $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+			"paging": true,
+			"lengthChange": false,
+			"searching": true,
+			"ordering": true,
+			"info": true,
+			"autoWidth": false,
+			 "language": {
+				"info": "Showing _START_ to _END_ of _TOTAL_ entries",
+				"search": " جستجو: ",
+				"paginate": {
+					"next": "صفحه بعد",
+					"previous": "صفحه قبل"
+				}
+			  }
+        });
+      });
+    </script>
+	
   </body>
 </html>
