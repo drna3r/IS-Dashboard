@@ -3,7 +3,7 @@
   <head>
   <!-- Test More HR... -->
     <meta charset="UTF-8">
-    <title>afshin AdminLTE 2 | Dashboard</title>
+    <title>InfoSalamat Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -44,7 +44,7 @@
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
+        <a href="index2.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>LT</span>
           <!-- logo for regular state and mobile devices -->
@@ -791,6 +791,82 @@
               </div>
               <!-- /.box -->
 
+			  
+			  
+			  
+			  			     <div class="box box-solid bg-light-blue-gradient">
+                  <!-- USERS LIST -->
+                  <div class="box box-danger">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">خانواده اینفوسلامت !</h3>
+                      <div class="box-tools pull-right">
+                        <span class="label label-danger">نه نفر تا امروز</span>
+                        <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                      </div>
+                    </div><!-- /.box-header -->
+                    <div class="box-body no-padding">
+                      <ul class="users-list clearfix">
+                        <li>
+                          <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">افشین نخجوانی</a>
+                          <span class="users-list-date">بیست خرداد</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">سهیل سراجی</a>
+                          <span class="users-list-date">سوم مرداد</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">علیرضا انگوتی</a>
+                          <span class="users-list-date">اول اردیبهشت</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">فرنوش هادی نژاد</a>
+                          <span class="users-list-date">چهارم مرداد</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">صبا عاصمی</a>
+                          <span class="users-list-date">بیست و یک تیر</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">ذوالفقار شوقی</a>
+                          <span class="users-list-date">اول اردیبهشت</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">ناصر نیرومندی</a>
+                          <span class="users-list-date">اول اردیبهشت</span>
+                        </li>
+                        <li>
+                          <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">فریده آخیلو</a>
+                          <span class="users-list-date">بیست خرداد</span>
+                        </li>
+                         <li>
+                          <img src="dist/img/user9-128x128.jpg" alt="User Image">
+                          <a class="users-list-name" href="#">حسن عبدی</a>
+                          <span class="users-list-date">بیست خرداد</span>
+                        </li>
+                      </ul><!-- /.users-list -->
+                    </div><!-- /.box-body -->
+                    <div class="box-footer text-center">
+                      <a href="javascript::" class="uppercase">View All Users</a>
+                    </div><!-- /.box-footer -->
+                  </div><!--/.box -->
+                </div><!-- /.col -->
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
               <!-- solid sales graph -->
               <div class="box box-solid bg-teal-gradient">
                 <div class="box-header">
