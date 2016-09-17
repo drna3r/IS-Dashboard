@@ -42,18 +42,17 @@
 	
 	
 	<script>
-	
-
-	$("#btnaddcompetitor").click(function(){
-	$.post("/processors/addcompetitor.php",
-    {
-        url: $("competitor_url").val()
-    },
-    function(data, status){
-        alert("Data: " + data + "\nStatus: " + status);
-    });
-});
+			$("#btnaddcompetitor").click(function(){
+			$.post("/processors/addcompetitor.php",
+			{
+				url: $("competitor_url").val()
+			},
+			function(data, status){
+				alert("Data: " + data + "\nStatus: " + status);
+			});
+		});
 	</script>
+	
   </head>
   <body class="skin-blue sidebar-mini">
     <div class="wrapper">
@@ -1286,6 +1285,20 @@
 			  }
         });
       });
+	  
+	  
+	  
+	  
+	  /*   Debug For Jquery Conflict / Hosseyn Rahimi  */
+	  		$("#btnaddcompetitor").click(function(){
+			$.post("/processors/addcompetitor.php",
+			{
+				url: $("competitor_url").val()
+			},
+			function(data, status){
+				alert("Data: " + data + "\nStatus: " + status);
+			});
+		});
     </script>
 	
   </body>
