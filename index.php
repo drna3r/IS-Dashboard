@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <!-- Test More... -->
     <meta charset="UTF-8">
     <title>HR AdminLTE 2 | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
