@@ -3,11 +3,7 @@
   <head>
   <!-- Test More HR... -->
     <meta charset="UTF-8">
-<<<<<<< HEAD
     <title>InfoSalamat Dashboard</title>
-=======
-    <title>afshin AdminLTE 2 | Dashboard</title>
->>>>>>> refs/remotes/origin/master
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
