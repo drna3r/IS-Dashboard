@@ -554,7 +554,7 @@ include("classes/functions.php");
                     <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
                   </div><!-- /input-group -->
 				<br>
-                  <table id="example2" class="table table-bordered table-hover table-striped">
+                  <table id="compati_form" class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
                         <th>نام وبسایت</th>
@@ -1260,8 +1260,7 @@ include("classes/functions.php");
     <!-- page script -->
     <script>
       $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
+        $('#compati_form').DataTable({
 			"lengthChange": false,
 			"searching": true,
 			"ordering": true,
@@ -1271,8 +1270,9 @@ include("classes/functions.php");
 			"scrollCollapse": true,
 			"processing": true,
 			"stateSave": true,
+			"thousands":      ",",
 			"paging":         false,
-						 "language": {
+			 "language": {
 				"info": "نمایش _START_  تا  _END_  از  _TOTAL_ داده",
 				"processing": "در حال پردازش ...",
 				"search": " جستجو: "
