@@ -572,8 +572,8 @@ include("classes/functions.php");
 							print '<tr>';
 							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" target="_blank">'.$row["title"].'</a></td>';
 							print '<td>'.$row["corpname"].'</td>';
-							print '<td></td>';
-							print '<td></td>';
+							print '<td>'.alexa_rank($row["url"],"cr").'</td>';
+							print '<td>'.alexa_rank($row["url"],"pt").'</td>';
 							print '</tr>';
 						}  
 						// Frees the memory associated with a result
