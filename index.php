@@ -536,6 +536,58 @@ include("classes/functions.php");
               </div>
             </div><!-- ./col -->
           </div><!-- /.row -->
+		  
+		  
+		  
+		  		<!-- جدول بررسی رقبا -->
+              <div class="row">
+			  <div class="col-md-12">
+			  <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">جدول بررسی رقبا</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">			
+                  <div class="input-group">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
+                    </div><!-- /btn-group -->
+                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
+                  </div><!-- /input-group -->
+				<br>
+                  <table id="compati_form" class="table table-bordered table-hover table-striped">
+                    <thead>
+                      <tr>
+                        <th>نام وبسایت</th>
+						<th>نام شرکت</th>
+                        <th>الکسا (ایران)</th>
+                        <th>الکسا (جهانی)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+					<?php
+						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
+						$results = $mysqli->query("SELECT url, title, corpname FROM competitor");
+						//output results
+						while($row = $results->fetch_assoc()) {
+							print '<tr>';
+							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" target="_blank">'.$row["title"].'</a></td>';
+							print '<td>'.$row["corpname"].'</td>';
+							print '<td>'.alexa_rank($row["url"],"cr").'</td>';
+							print '<td>'.alexa_rank($row["url"],"pt").'</td>';
+							print '</tr>';
+						}  
+						// Frees the memory associated with a result
+						$results->free();
+					?>
+                    </tbody>
+                  </table>
+				  </div>
+				  </div>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->	
+		  
+		  
+		  
           <!-- Main row -->
           <div class="row">
             <!-- Left col -->
@@ -765,6 +817,7 @@ include("classes/functions.php");
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
+<<<<<<< HEAD
 			
 		<!-- جدول بررسی رقبا -->
               <div class="box">
@@ -811,6 +864,9 @@ include("classes/functions.php");
               </div><!-- /.box -->	
 
               <!-- Map box -->
+=======
+            <!-- Map box -->
+>>>>>>> refs/remotes/origin/na3r
               <div class="box box-solid bg-light-blue-gradient">
                 <div class="box-header">
                   <!-- tools box -->
@@ -1253,21 +1309,22 @@ include("classes/functions.php");
     <!-- page script -->
     <script>
       $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-			"paging": true,
+        $('#compati_form').DataTable({
 			"lengthChange": false,
 			"searching": true,
 			"ordering": true,
 			"info": true,
 			"autoWidth": false,
+			"scrollY":        '20vh',
+			"scrollCollapse": true,
+			"processing": true,
+			"stateSave": true,
+			"thousands":      ",",
+			"paging":         false,
 			 "language": {
-				"info": "Showing _START_ to _END_ of _TOTAL_ entries",
-				"search": " جستجو: ",
-				"paginate": {
-					"next": "صفحه بعد",
-					"previous": "صفحه قبل"
-				}
+				"info": "نمایش _START_  تا  _END_  از  _TOTAL_ داده",
+				"processing": "در حال پردازش ...",
+				"search": " جستجو: "
 			  }
         });
       });
