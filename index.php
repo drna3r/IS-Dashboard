@@ -554,7 +554,7 @@ include("classes/functions.php");
                     <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
                   </div><!-- /input-group -->
 				<br>
-                  <table id="example2" class="table table-bordered table-hover">
+                  <table id="example2" class="table table-bordered table-hover table-striped">
                     <thead>
                       <tr>
                         <th>نام وبسایت</th>
@@ -570,7 +570,7 @@ include("classes/functions.php");
 						//output results
 						while($row = $results->fetch_assoc()) {
 							print '<tr>';
-							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
+							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" target="_blank">'.$row["title"].'</a></td>';
 							print '<td>'.$row["corpname"].'</td>';
 							print '<td></td>';
 							print '<td></td>';
@@ -1262,19 +1262,20 @@ include("classes/functions.php");
       $(function () {
         $("#example1").DataTable();
         $('#example2').DataTable({
-			"paging": true,
 			"lengthChange": false,
 			"searching": true,
 			"ordering": true,
 			"info": true,
 			"autoWidth": false,
-			 "language": {
-				"info": "Showing _START_ to _END_ of _TOTAL_ entries",
-				"search": " جستجو: ",
-				"paginate": {
-					"next": "صفحه بعد",
-					"previous": "صفحه قبل"
-				}
+			"scrollY":        '20vh',
+			"scrollCollapse": true,
+			"processing": true,
+			"stateSave": true,
+			"paging":         false,
+						 "language": {
+				"info": "نمایش _START_  تا  _END_  از  _TOTAL_ داده",
+				"processing": "در حال پردازش ...",
+				"search": " جستجو: "
 			  }
         });
       });
