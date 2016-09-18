@@ -47,4 +47,30 @@ function alexa_rank($url,$i){
 	endif;
 }
 
+
+
+// Get Alexa Rank
+function alexa_rank_to_database_query($id,$connect){
+	
+$url = $connect->query("SELECT url FROM competitor WHERE id = ".$id)->fetch_object()->url; 
+	$xml = simplexml_load_file("http://data.alexa.com/data?cli=10&url=".$url);
+	if(isset($xml->SD)):
+		$xmlobj = $xml->SD;
+		$xmlobj = (array)$xmlobj;
+		
+		$query="INSERT INTO alexalog (competitorid, POPULARITYURL, POPULARITYTEXT, POPULARITYSOURCE, REACHRANK, RANKDELTA, COUNTRYCODE, COUNTRYNAME, COUNTRYRANK) VALUES(".$id.",
+		'".@$xmlobj['POPULARITY']['URL']."',
+		'".@$xmlobj['POPULARITY']['TEXT']."',
+		'".@$xmlobj['POPULARITY']['SOURCE']."',
+		'".@$xmlobj['REACH']['RANK']."',
+		'".@$xmlobj['REACH']['DELTA']."',
+		'".@$xmlobj['COUNTRY']['CODE']."',
+		'".@$xmlobj['COUNTRY']['NAME']."',
+		'".@$xmlobj['COUNTRY']['RANK']."')";
+		
+unset($url);
+	return $query;
+
+	endif;
+}
 ?>

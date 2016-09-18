@@ -1,6 +1,23 @@
 <?php
 include("includes/config.php");
 include("classes/functions.php");
+
+
+
+
+$results = $mysqli->query("SELECT id FROM competitor");
+//output results
+while($row = $results->fetch_assoc()) {
+	$insert_row = $mysqli->query(alexa_rank_to_database_query($row["id"],$mysqli));
+	if($insert_row){
+	print '<!--Success! ID of last inserted record is : ' .$mysqli->insert_id .'-->'; 
+	}else{
+	die('<!--Error : ('. $mysqli->errno .') '. $mysqli->error.'-->');
+	}
+}  
+// Frees the memory associated with a result
+$results->free();
+
 ?>
 
 
@@ -563,7 +580,7 @@ include("classes/functions.php");
                         <th>الکسا (جهانی)</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="competitorList">
 					<?php
 						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
 						$results = $mysqli->query("SELECT url, title, corpname FROM competitor");
@@ -572,8 +589,8 @@ include("classes/functions.php");
 							print '<tr>';
 							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" target="_blank">'.$row["title"].'</a></td>';
 							print '<td>'.$row["corpname"].'</td>';
-							print '<td>'.alexa_rank($row["url"],"cr").'</td>';
-							print '<td>'.alexa_rank($row["url"],"pt").'</td>';
+							print '<td>'.@alexa_rank($row["url"],"cr").'</td>';
+							print '<td>'.@alexa_rank($row["url"],"pt").'</td>';
 							print '</tr>';
 						}  
 						// Frees the memory associated with a result
@@ -817,56 +834,12 @@ include("classes/functions.php");
             </section><!-- /.Left col -->
             <!-- right col (We are only adding the ID to make the widgets sortable)-->
             <section class="col-lg-5 connectedSortable">
-<<<<<<< HEAD
-			
-		<!-- جدول بررسی رقبا -->
-              <div class="box">
-                <div class="box-header">
-                  <h3 class="box-title">جدول بررسی رقبا</h3>
-                </div><!-- /.box-header -->
-                <div class="box-body">			
-                  <div class="input-group">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-danger" id="btnaddcompetitor" >اضافه کردن آدرس سایت رقیب</button>
-                    </div><!-- /btn-group -->
-                    <input type="text" id="competitor_url" class="form-control" placeholder="http://google.com به طور مثال" style="text-align:left;direction:ltr;">
-                  </div><!-- /input-group -->
-				<br>
-                  <table id="example2" class="table table-bordered table-hover">
-                    <thead>
-                      <tr>
-                        <th>نام وبسایت</th>
-						<th>نام شرکت</th>
-                        <th>الکسا (ایران)</th>
-                        <th>الکسا (جهانی)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-					<?php
-						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5,20");
-						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5");
-						$results = $mysqli->query("SELECT url, title, corpname FROM competitor");
-						//output results
-						while($row = $results->fetch_assoc()) {
-							print '<tr>';
-							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" >'.$row["title"].'</a></td>';
-							print '<td>'.$row["corpname"].'</td>';
-							print '<td></td>';
-							print '<td></td>';
-							print '</tr>';
-						}  
-						// Frees the memory associated with a result
-						$results->free();
-					?>
-                    </tbody>
-                  </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->	
-
+	
+	
               <!-- Map box -->
-=======
+
             <!-- Map box -->
->>>>>>> refs/remotes/origin/na3r
+
               <div class="box box-solid bg-light-blue-gradient">
                 <div class="box-header">
                   <!-- tools box -->
@@ -1339,7 +1312,9 @@ include("classes/functions.php");
 				url: $("#competitor_url").val()
 			},
 			function(data, status){
-				alert("Data: " + data + "\nStatus: " + status);
+				
+				$('#competitorList').append(data);
+				alert("Status: " + status);
 			});
 		});
     </script>
