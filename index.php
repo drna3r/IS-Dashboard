@@ -260,14 +260,14 @@ include("classes/functions.php");
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">محمد شریفی</span>
+                  <span class="hidden-xs">صبا عاصمی</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     <p>
-                     محمد شریفی - توسعه دهنده سمت کاربر
+                     صبا عاصمی - توسعه دهنده سمت کاربر
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -312,7 +312,7 @@ include("classes/functions.php");
               <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>محمد شریفی</p>
+              <p>صبا عاصمی</p>
               <a href="#"><i class="fa fa-circle text-success"></i> آنلاین</a>
             </div>
           </div>
@@ -563,23 +563,56 @@ include("classes/functions.php");
                         <th>الکسا (جهانی)</th>
                       </tr>
                     </thead>
-                    <tbody>
-					<?php
-						//$results = $mysqli->query("SELECT url, title, corpname FROM competitor LIMIT 5 # Retrieve rows 6-15");
-						$results = $mysqli->query("SELECT url, title, corpname FROM competitor");
-						//output results
-						while($row = $results->fetch_assoc()) {
-							print '<tr>';
-							print '<td><a href="'.$row["url"].'" title="'.$row["title"].'" target="_blank">'.$row["title"].'</a></td>';
-							print '<td>'.$row["corpname"].'</td>';
-							print '<td>'.alexa_rank($row["url"],"cr").'</td>';
-							print '<td>'.alexa_rank($row["url"],"pt").'</td>';
-							print '</tr>';
-						}  
-						// Frees the memory associated with a result
-						$results->free();
-					?>
-                    </tbody>
+					<tbody>
+						<tr role="row" class="odd">
+							<td><a href="http://nobat.ir/" title="Nobat.ir سایت نوبت دهی مطب پزشکان " target="_blank">Nobat.ir سایت نوبت دهی مطب پزشکان </a></td>
+							<td></td>
+							<td class="sorting_1"></td>
+							<td>43749</td>
+						</tr>
+						<tr role="row" class="even">
+							<td><a href="http://pezeshkekhoob.com/" title="پزشک خوب - جستجو و رزرو اینترنتی پزشک و دندانپزشک&#8236;&lrm;" target="_blank">پزشک خوب - جستجو و رزرو اینترنتی پزشک و دندانپزشک&#8236;&lrm;</a></td>
+							<td></td>
+							<td class="sorting_1">5847</td>
+							<td>258298</td>
+						</tr>
+						<tr role="row" class="odd">
+							<td><a href="https://www.salamdoctor.com/" title="سلام دکتر - سلامت هوشمند " target="_blank">سلام دکتر - سلامت هوشمند </a></td>
+							<td></td>
+							<td class="sorting_1">9368</td>
+							<td>366140</td>
+						</tr>
+						<tr role="row" class="even">
+							<td><a href="http://www.salamatyar.com/" title="سلامتیار Salamatyar" target="_blank">سلامتیار Salamatyar</a></td>
+							<td></td>
+							<td class="sorting_1">12107</td>
+							<td>514914</td>
+						</tr>
+						<tr role="row" class="odd">
+							<td><a href="https://www.darmankade.ir/" title="نوبت دهی مطب پزشکان و دندانپزشکان - درمانکده" target="_blank">نوبت دهی مطب پزشکان و دندانپزشکان - درمانکده</a></td>
+							<td></td>
+							<td class="sorting_1">13176</td>
+							<td>490801</td>
+						</tr>
+						<tr role="row" class="even">
+							<td><a href="http://visit123.ir/" title="بیمه سلامت > دریافت نوبت" target="_blank">بیمه سلامت &gt; دریافت نوبت</a></td>
+							<td></td>
+							<td class="sorting_1">26456</td>
+							<td>1051177</td>
+						</tr>
+						<tr role="row" class="odd">
+							<td><a href="http://drdr.ir/" title="دکتر دکتر سامانه جامع نوبت دهی و مدیریت مطب پزشکان" target="_blank">دکتر دکتر سامانه جامع نوبت دهی و مدیریت مطب پزشکان</a></td>
+							<td></td>
+							<td class="sorting_1">45772</td>
+							<td>1927992</td>
+						</tr>
+						<tr role="row" class="even">
+							<td><a href="http://reservedoctor.ir/" title="وب سایت جامع نوبت دهی اینترنتی پزشکان صدف" target="_blank">وب سایت جامع نوبت دهی اینترنتی پزشکان صدف</a></td>
+							<td></td>
+							<td class="sorting_1">92651</td>
+							<td>2434395</td>
+						</tr>
+					</tbody>
                   </table>
 				  </div>
 				  </div>
@@ -648,7 +681,7 @@ include("classes/functions.php");
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-left"><i class="fa fa-clock-o"></i> 5:15</small>
-                        محمد شریفی
+                        صبا عاصمی
                       </a>
                       I would like to meet you to discuss the latest news about
                       the arrival of the new theme. They say it is going to be one the
