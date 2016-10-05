@@ -644,7 +644,7 @@ include("classes/functions.php");
               <div class="box box-success">
                 <div class="box-header">
                   <i class="fa fa-comments-o"></i>
-                  <h3 class="box-title">Chat</h3>
+                  <h3 class="box-title">گفتگو در گروه تلگرام / Tansa : Telegram</h3>
                   <div class="box-tools pull-left" data-toggle="tooltip" title="Status">
                     <div class="btn-group" data-toggle="btn-toggle" >
                       <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i></button>
@@ -659,14 +659,12 @@ include("classes/functions.php");
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-left"><i class="fa fa-clock-o"></i> 2:15</small>
-                        Mike Doe
+                        ناصر
                       </a>
-                      I would like to meet you to discuss the latest news about
-                      the arrival of the new theme. They say it is going to be one the
-                      best themes on the market
+مورد توجه همکاران محتوا : 
                     </p>
                     <div class="attachment">
-                      <h4>Attachments:</h4>
+                      <h4>فایل پیوست:</h4>
                       <p class="filename">
                         Theme-thumbnail-image.jpg
                       </p>
@@ -681,11 +679,9 @@ include("classes/functions.php");
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-left"><i class="fa fa-clock-o"></i> 5:15</small>
-                        صبا عاصمی
+                        فریده آخیلو
                       </a>
-                      I would like to meet you to discuss the latest news about
-                      the arrival of the new theme. They say it is going to be one the
-                      best themes on the market
+ممنون لطفا مطالب من زودتر ویرایش بشن!
                     </p>
                   </div><!-- /.item -->
                   <!-- chat item -->
@@ -694,17 +690,24 @@ include("classes/functions.php");
                     <p class="message">
                       <a href="#" class="name">
                         <small class="text-muted pull-left"><i class="fa fa-clock-o"></i> 5:30</small>
-                        Susan Doe
+                        صبا
                       </a>
-                      I would like to meet you to discuss the latest news about
-                      the arrival of the new theme. They say it is going to be one the
-                      best themes on the market
+دوستان لطفا در پاسخ دادن به نظرات و سوالات مردم در وبسایت که در دسترس همه ی بازدید کنندگان هست، دقت کنید که با چه زبانی جواب میدید، یا همه رو با زبان محاوره جواب بدبد یا همه رو با زبان نوشتار، اینکه یه جمله محاوره ای باشه و جمله بعدی با زبان نوشتار پاسخ داده شود خوب نیست! البته پیشنهاد من زبان نوشتار روانه.
                     </p>
+                  </div><!-- /.item -->                  
+				  <div class="item">
+                    <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                    <p class="message">
+                      <a href="#" class="name">
+                        <small class="text-muted pull-left"><i class="fa fa-clock-o"></i> 5:30</small>
+                        صبا
+                      </a>
+راستی من از اراک تا تهران بغل یه دکتر نشسته بودم، اینقدر از وضعیت پزشکا و بیمارستانا و خانه های بهداشت اراک حرف زد و بد گفت که نگو! اومدم شرکت همه رو تعریف میکنم. منم یه کلی از کارمون براش حرف زدم و نظراتش رو پرسیدم                    </p>
                   </div><!-- /.item -->
                 </div><!-- /.chat -->
                 <div class="box-footer">
                   <div class="input-group">
-                    <input class="form-control" placeholder="Type message...">
+                    <input class="form-control" placeholder="نوشتن پیغام به گروه ...">
                     <div class="input-group-btn">
                       <button class="btn btn-success"><i class="fa fa-plus"></i></button>
                     </div>
@@ -716,7 +719,7 @@ include("classes/functions.php");
               <div class="box box-primary">
                 <div class="box-header">
                   <i class="ion ion-clipboard"></i>
-                  <h3 class="box-title">To Do List</h3>
+                  <h3 class="box-title">To Do List / لیست کارهای دردست اجرا</h3>
                   <div class="box-tools pull-left">
                     <ul class="pagination pagination-sm inline">
                       <li><a href="#">&laquo;</a></li>
@@ -738,9 +741,9 @@ include("classes/functions.php");
                       <!-- checkbox -->
                       <input type="checkbox" value="" name="">
                       <!-- todo text -->
-                      <span class="text">Design a nice theme</span>
+                      <span class="text">جلسه و قرارملاقات با دکتر میرزازاده و جناب حسینی نژاد</span>
                       <!-- Emphasis label -->
-                      <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
+                      <small class="label label-danger">مدیریت</small>
                       <!-- General tools such as edit or delete-->
                       <div class="tools">
                         <i class="fa fa-edit"></i>
@@ -753,8 +756,8 @@ include("classes/functions.php");
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                       <input type="checkbox" value="" name="">
-                      <span class="text">Make the theme responsive</span>
-                      <small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>
+                      <span class="text">تماس با هاست ایران بابت اختلالات اخیر در وب میل سرور</span>
+                      <small class="label label-info">تیم فنی</small>
                       <div class="tools">
                         <i class="fa fa-edit"></i>
                         <i class="fa fa-trash-o"></i>
@@ -766,8 +769,8 @@ include("classes/functions.php");
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                       <input type="checkbox" value="" name="">
-                      <span class="text">Let theme shine like a star</span>
-                      <small class="label label-warning"><i class="fa fa-clock-o"></i> 1 day</small>
+                      <span class="text">دفترچه هویت بصری / پیگیری آقای درخشنده</span>
+                      <small class="label label-warning">طراحی و گرافیک</small>
                       <div class="tools">
                         <i class="fa fa-edit"></i>
                         <i class="fa fa-trash-o"></i>
@@ -779,8 +782,8 @@ include("classes/functions.php");
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                       <input type="checkbox" value="" name="">
-                      <span class="text">Let theme shine like a star</span>
-                      <small class="label label-success"><i class="fa fa-clock-o"></i> 3 days</small>
+                      <span class="text">ملاقاب با دکتر ابطحی</span>
+                      <small class="label label-success"> بازاریابی</small>
                       <div class="tools">
                         <i class="fa fa-edit"></i>
                         <i class="fa fa-trash-o"></i>
@@ -792,8 +795,8 @@ include("classes/functions.php");
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                       <input type="checkbox" value="" name="">
-                      <span class="text">Check your messages and notifications</span>
-                      <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 week</small>
+                      <span class="text">تکمیل واریز دیتابیس با nodejs</span>
+                      <small class="label label-primary">برنامه نویس</small>
                       <div class="tools">
                         <i class="fa fa-edit"></i>
                         <i class="fa fa-trash-o"></i>
@@ -805,8 +808,8 @@ include("classes/functions.php");
                         <i class="fa fa-ellipsis-v"></i>
                       </span>
                       <input type="checkbox" value="" name="">
-                      <span class="text">Let theme shine like a star</span>
-                      <small class="label label-default"><i class="fa fa-clock-o"></i> 1 month</small>
+                      <span class="text">ارائه در سمینار مدیریت محتوا</span>
+                      <small class="label label-default">انتخاب نشده</small>
                       <div class="tools">
                         <i class="fa fa-edit"></i>
                         <i class="fa fa-trash-o"></i>
@@ -814,16 +817,13 @@ include("classes/functions.php");
                     </li>
                   </ul>
                 </div><!-- /.box-body -->
-                <div class="box-footer clearfix no-border">
-                  <button class="btn btn-default pull-left"><i class="fa fa-plus"></i> Add item</button>
-                </div>
               </div><!-- /.box -->
 
               <!-- quick email widget -->
               <div class="box box-info">
                 <div class="box-header">
                   <i class="fa fa-envelope"></i>
-                  <h3 class="box-title">Quick Email</h3>
+                  <h3 class="box-title">ارسال ایمیل سریع</h3>
                   <!-- tools box -->
                   <div class="pull-left box-tools">
                     <button class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
@@ -832,18 +832,18 @@ include("classes/functions.php");
                 <div class="box-body">
                   <form action="#" method="post">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="emailto" placeholder="Email to:">
+                      <input type="email" class="form-control" name="emailto" placeholder="ایمیل به :">
                     </div>
                     <div class="form-group">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject">
+                      <input type="text" class="form-control" name="subject" placeholder="موضوع">
                     </div>
                     <div>
-                      <textarea class="textarea" placeholder="Message" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                      <textarea class="textarea" placeholder="متن ایمیل را بنویسید ..." style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                     </div>
                   </form>
                 </div>
                 <div class="box-footer clearfix">
-                  <button class="pull-left btn btn-default" id="sendEmail">Send <i class="fa fa-arrow-circle-left"></i></button>
+                  <button class="pull-left btn btn-default" id="sendEmail">ارسال <i class="fa fa-arrow-circle-left"></i></button>
                 </div>
               </div>
 
@@ -991,72 +991,6 @@ include("classes/functions.php");
                     </div><!-- ./col -->
                   </div><!-- /.row -->
                 </div><!-- /.box-footer -->
-              </div><!-- /.box -->
-
-              <!-- Calendar -->
-              <div class="box box-solid bg-green-gradient">
-                <div class="box-header">
-                  <i class="fa fa-calendar"></i>
-                  <h3 class="box-title">Calendar</h3>
-                  <!-- tools box -->
-                  <div class="pull-left box-tools">
-                    <!-- button with a dropdown -->
-                    <div class="btn-group">
-                      <button class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
-                      <ul class="dropdown-menu pull-left" role="menu">
-                        <li><a href="#">Add new event</a></li>
-                        <li><a href="#">Clear events</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">View calendar</a></li>
-                      </ul>
-                    </div>
-                    <button class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i></button>
-                  </div><!-- /. tools -->
-                </div><!-- /.box-header -->
-                <div class="box-body no-padding">
-                  <!--The calendar -->
-                  <div id="calendar" style="width: 100%"></div>
-                </div><!-- /.box-body -->
-                <div class="box-footer text-black">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <!-- Progress bars -->
-                      <div class="clearfix">
-                        <span class="pull-right">Task #1</span>
-                        <small class="pull-left">90%</small>
-                      </div>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 90%;"></div>
-                      </div>
-
-                      <div class="clearfix">
-                        <span class="pull-right">Task #2</span>
-                        <small class="pull-left">70%</small>
-                      </div>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 70%;"></div>
-                      </div>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                      <div class="clearfix">
-                        <span class="pull-right">Task #3</span>
-                        <small class="pull-left">60%</small>
-                      </div>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 60%;"></div>
-                      </div>
-
-                      <div class="clearfix">
-                        <span class="pull-right">Task #4</span>
-                        <small class="pull-left">40%</small>
-                      </div>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%;"></div>
-                      </div>
-                    </div><!-- /.col -->
-                  </div><!-- /.row -->
-                </div>
               </div><!-- /.box -->
 
             </section><!-- right col -->
